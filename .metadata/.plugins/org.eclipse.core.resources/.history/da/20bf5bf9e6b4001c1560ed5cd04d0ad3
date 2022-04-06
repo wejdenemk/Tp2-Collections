@@ -1,0 +1,23 @@
+package annuaire;
+
+import java.util.HashMap;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		HashMap< String ,Fiche > TA = new HashMap<>();
+		
+		Fiche F1 = new Fiche("Fiche 1");
+		Fiche F2 = new Fiche("Fiche 2");
+		Fiche F3 = new Fiche("Fiche 3");
+		
+		TA.put("a",F1);
+		TA.put("b",F2);
+		TA.put("c",F3);
+		
+		Annuaire An1 = new Annuaire(TA);
+		
+		An1.getContact("a");
+		An1.getNBconttacts();	}
+}

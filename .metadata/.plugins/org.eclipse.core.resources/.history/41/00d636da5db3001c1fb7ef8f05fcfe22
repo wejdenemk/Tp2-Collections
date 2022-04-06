@@ -1,0 +1,8 @@
+package entreprise;
+
+public class employe {
+	private int cin;
+	private String nom;
+	private double salaire;
+	private int NumDep;
+}

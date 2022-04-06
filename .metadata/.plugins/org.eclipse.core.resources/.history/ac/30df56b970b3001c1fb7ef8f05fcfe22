@@ -1,0 +1,64 @@
+package entreprise;
+
+import java.util.Set;
+
+public class Departement {
+	private int idDep;
+	private int Capacity;
+	Set<employe> LEmployes;
+	
+	public Departement(int idDep, int capacity, Set<employe> lEmployes) {
+		super();
+		this.idDep = idDep;
+		Capacity = capacity;
+		LEmployes = lEmployes;
+	}
+
+	public int getIdDep() {
+		return idDep;
+	}
+
+	public void setIdDep(int idDep) {
+		this.idDep = idDep;
+	}
+
+	public int getCapacity() {
+		return Capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		Capacity = capacity;
+	}
+
+	public Set<employe> getLEmployes() {
+		return LEmployes;
+	}
+
+	public void setLEmployes(Set<employe> lEmployes) {
+		LEmployes = lEmployes;
+	}
+	
+	public void ajoutEmploye(employe E) {
+		while(LEmployes.size()<Capacity) {
+			if(E.getCin()>0){
+				LEmployes.add(E);
+				E.setNumDep(idDep);
+			}
+		}
+	}
+	
+	public void retirerEmploye(employe E) {
+		LEmployes.remove(E);
+	}
+
+	public String afficheDep() {
+		return "Departement [idDep=" + idDep + ", Capacity=" + Capacity + ", List d'Employes=" + LEmployes + "]";
+	}
+	
+	public boolean exicteE(int cin) {
+		
+		return LEmployes.contains(cin);
+		
+	}
+	
+}

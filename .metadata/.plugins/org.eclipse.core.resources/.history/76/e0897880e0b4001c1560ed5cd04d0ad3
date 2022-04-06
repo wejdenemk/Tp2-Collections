@@ -1,0 +1,24 @@
+package annuaire;
+
+import java.util.HashMap;
+
+public class Annuaire {
+	HashMap< String ,Fiche > TA ;
+
+	public Annuaire(HashMap<String, Fiche> tA) {
+		super();
+		TA = tA;
+	}
+
+	public HashMap<String, Fiche> getTA() {
+		return TA;
+	}
+
+	public void setTA(HashMap<String, Fiche> tA) {
+		TA = tA;
+	}
+	
+	
+	
+	
+}

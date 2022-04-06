@@ -1,0 +1,19 @@
+package annuaire;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Annuaire An1 = new Annuaire();
+		
+		Fiche F1 = new Fiche("Fiche 1");
+		Fiche F2 = new Fiche("Fiche 2");
+		Fiche F3 = new Fiche("Fiche 3");
+		
+	
+		
+		
+		
+	}
+}

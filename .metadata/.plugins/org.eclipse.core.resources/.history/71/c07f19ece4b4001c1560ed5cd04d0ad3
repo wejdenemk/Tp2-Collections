@@ -1,0 +1,45 @@
+package annuaire;
+
+import java.util.HashMap;
+
+public class Annuaire {
+	HashMap< String ,Fiche > TA ;
+
+	public Annuaire(HashMap<String, Fiche> tA) {
+		super();
+		TA = tA;
+	}
+
+	public HashMap<String, Fiche> getTA() {
+		return TA;
+	}
+
+	public void setTA(HashMap<String, Fiche> tA) {
+		TA = tA;
+	}
+	
+	
+	public void getNBconttacts(){
+		System.out.println(TA.size());
+	}
+	
+	public void addContact(String s) {
+		Fiche F= new Fiche(s);
+		TA.put(s,F);
+	}
+	
+	public void getContact(String name) {
+		for (String i : TA.keySet()) {
+			 if(i == name) {}
+			 System.out.println(TA.get(i));
+			}
+	}
+
+	public String toString() {
+		return "Annuaire [TA=" + TA + "]";
+	}
+	
+	
+
+	
+}
